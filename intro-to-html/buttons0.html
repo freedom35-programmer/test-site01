@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Buttons Practice</title>
+        <!-- general technique is to first create an element in html, then select it and style it using css-->
+
+        <!-- the 'button' is a css selector, 'background-color' is css property and 'red' is its value 
+         in css, space is called margin-->
+        
+        <!-- 
+        -> selector:state {...property: value;...}
+        applies when our interaction with the selected element conforms to the state defined by the pseudo-class (pseudo-class names are NOT case sensitive)
+        Example:
+        button:hover {
+            filter: brightness(50%);
+        }
+            here, 'button' is the selector, 'state' is the pseudo-class, and the content inside {...} is the styling to be applied.
+        
+        -> transition: property duration timing-function delay|initial|inherit;
+        transitions enable us to define the transition between two states of an element. timing-function specifies the speed curve of the transition effect, transition delay defines when the transition effect will start, initial sets the delay property to its default value, inherit keyword is used when we need to inherit the delay value from the parent element.
+        
+        -> box-shadow: right bottom blur color;
+        'right' should be the width of the right shadow in px, 'blur' is the width of blur effect on shadows in px, 'color' is the color of the shadow 
+        -->
+        
+        <!-- CSS Box Model
+        
+        by default, the browser tries to align elements based on the text content within them, to override this, we have to alter the 'vertical-align' property to 'top' which aligns the whole element to the top of the line
+        
+        margin: spacing on the outside of the element
+        padding: spacing on the inside of the element, around the text; 6px is the default padding on left and right, 1px on top and bottom
+        usage: padding: top right bottom left, values in px
+        border: thickness of the element border
+        
+        -->
+
+        <link rel="stylesheet" href="styles/buttons0.css"> <!-- link tag doesnot need a closing tag, such elements are called void elemnts 
+        
+        -> rel is a descriptive attribute attached to a hyperlink in order to define the type of the link, or the relationship between the source and destination resources
+        -->
+    </head>
+
+    <body>
+        <button class="subscribe-button">SUBSCRIBE</button> <!-- a class attribute is a global identifier, i.e. it can be used to select multiple elements using '.'-->
+
+        <button id="join-button">JOIN</button> <!-- an id attribute is used to uniquely identify a single element using '#' for styling or JS manipulation -->
+
+        <button class="tweet-button">Tweet</button>
+
+        <h1>assignment 2</h1>
+
+        <button id="uber" title="uber">Request now</button> <!-- title attribute displays text on hover -->
+
+        <button id="amazon" title="hurry up!">Add to Cart</button>
+
+        <h1>assignment 3</h1>
+
+        <button id="stretch-box" title="rubber!">stretches</button>
+        <br> <!-- to break into a new line --> <br> <!-- to leave an empty line -->
+        <button id="click-3d">shadow 3d click...</button>
+    </body>
+</html>

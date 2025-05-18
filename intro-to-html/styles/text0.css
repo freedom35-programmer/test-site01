@@ -1,0 +1,75 @@
+p {
+  font-family: Montserrat;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.video-title {
+  font-size: 18px;
+  font-weight: bold;
+  width: 280px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+
+.video-stats {
+  font-size: 14px;
+  color: rgb(96, 96, 96);
+  margin-bottom: 20px;
+}
+
+.video-author {
+  font-size: 14px;
+  color: rgb(96, 96, 96);
+  margin-bottom: 20px;
+}
+
+.video-description {
+  font-size: 14px;
+  width: 280px;
+  color: rgb(96, 96, 96);
+  line-height: 20px;
+}
+
+.apple-text {
+  background-color: rgb(227, 65, 64);
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+  padding: 18px 0px 18px 0px;
+}
+
+.shop-link {
+  cursor: pointer;
+}
+
+.shop-link:hover {
+  text-decoration: underline;
+}
+
+.cash-value {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.denomination {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(96, 96, 96);
+  margin-left: 0px;
+}
+
+.pro-loss {
+  color: green;
+  margin-bottom: 5px;
+}
+
+.updates {
+  color: rgb(96, 96, 96);
+}
+
+.updates-pro-loss {
+  color: rgb(227, 65, 64);
+}

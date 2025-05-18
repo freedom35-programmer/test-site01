@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- a grid is a layout that has rows and columns -->
+<html>
+
+<head>
+    <title>Grid Practice</title>
+
+
+</head>
+
+<body style="padding-bottom: 1000px">
+    <div style="
+        display: grid;
+        grid-template-columns: 100px 100px;
+        "> <!-- we specify that we require a grid style display containing 2 columns of width 100px each -->
+        <div style="background-color: lightblue">
+            div 1
+        </div> <!-- css inline stying -->
+
+        <div style="background-color: lightpink">
+            div 2
+            <p>
+                text
+            </p>
+        </div>
+    </div>
+
+    <div style="
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 100px 100px 200px;
+    ">
+        <div style="background-color: lightblue">
+            100px
+        </div>
+
+        <div style="background-color: lightpink">
+            100px
+            <p>
+                text
+            </p>
+        </div>
+
+        <div style="background-color: lightblue">
+            200px
+        </div>
+
+        <div style="background-color: lightpink">
+            100px
+        </div>
+        <!-- whenever the number of specified columns is exceeded, new cells are displayed in the next row -->
+    </div>
+
+    <div style="
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+    "> <!-- fr stands for fraction, it is used to specify the fraction of available space to be used as a width or height -->
+        <div style="background-color: lightblue">
+            100px
+        </div>
+
+        <div style="background-color: lightpink">
+            1fr
+        </div>
+    </div>
+
+    <div style="
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: 100px 1fr 2fr;
+        "> <!-- the 2nd column will have 1/3rd of the remaining space while the third column will have 2/3rd -->
+        <div style="background-color: lightblue">
+            100px
+        </div>
+
+        <div style="background-color: lightpink">
+            1fr
+        </div>
+
+        <div style="background-color: lightblue">
+            2fr
+        </div>
+    </div>
+
+    <div style="
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 10px;
+                row-gap: 20px;
+        "> <!-- the 2nd column will have 1/3rd of the remaining space while the third column will have 2/3rd -->
+        <div style="background-color: lightblue; height: 100px">
+            1fr
+        </div> <!-- all cells in a row will conform to the tallest cell in that row -->
+
+        <div style="background-color: lightpink">
+            1fr
+        </div>
+
+        <div style="background-color: lightblue">
+            1fr
+        </div>
+
+        <div style="background-color: lightpink; height: 100px">
+            1fr
+        </div>
+
+        <div style="background-color: lightblue">
+            1fr
+        </div>
+
+        <div style="background-color: lightpink">
+            1fr
+        </div>
+    </div>
+</body>
+
+</html>

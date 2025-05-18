@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>
+        YouTube clone
+    </title>
+
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/video.css">
+    <link rel="stylesheet" href="/styles/sidebar.css">
+</head>
+
+<!-- in html there are 3 basic types of elements
+1. block element: take up the entire space in a container. Ex: paragraph, heading
+2. inline block: takes up just the needed amount of space. Ex: image, input
+3. inline element: appear within a line of text. Ex: strong, italic, underline
+
+the most important element in html is the div (division) element, divs are meant to be containers that group different elements together, div is block type by default, a div can contain any other elements and other divs within it
+-->
+
+<body>
+    <!-- semantic elements in html are used to define various parts of our webpage, this allows for bots and other software to parse the webpage with more context instead of when using divs for everything, some semantic elements are header, nav, main, footer, section, article, etc. -->
+    <header class="header">
+        <div class="left-section">
+            <img class="hamburger-menu" src="/icons/hamburger-menu.svg">
+
+            <img class="youtube-logo" src="/icons/youtube-logo.svg">
+        </div>
+
+        <div class="middle-section">
+            <input class="search-bar" type="text" placeholder="Search">
+
+            <button class="search-button">
+                <img class="search-icon" src="/icons/search.svg">
+                <div class="tooltip">Search</div>
+            </button>
+
+            <button class="voice-search-button">
+                <img class="voice-search-icon" src="/icons/voice-search-icon.svg">
+                <div class="tooltip">Search with your voice</div>
+            </button>
+        </div>
+
+        <div class="right-section">
+            <div class="upload-icon-container">
+                <img class="upload-icon" src="/icons/upload.svg">
+
+                <div class="tooltip">
+                    Create
+                </div>
+            </div>
+
+            <div class="youtube-apps-icon-container">
+                <img class="youtube-apps-icon" src="/icons/youtube-apps.svg">
+
+                <div class="tooltip">
+                    YouTube apps
+                </div>
+            </div>
+
+            <div class="notifications-icon-container">
+                <img class="notifications-icon" src="/icons/notifications.svg">
+
+                <div class="notifications-count">
+                    4
+                </div>
+
+                <div class="tooltip">
+                    Notifications
+                </div>
+            </div>
+
+            <div class="current-user-picture-container">
+                <img class="current-user-picture" src="/channel-pictures/cat-pic.jpg">
+
+                <div class="tooltip"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- nested layouts technique
+    
+    1 -> break any visual component into either a horizontal or vertical layout suitably.
+
+    2 -> visit each level in the layout and repeat the process until no further division is possible.
+    
+    -->
+
+    <nav class="sidebar">
+        <div class="sidebar-link">
+            <img class="sidebar-image" src="/icons/home.svg">
+            <div class="sidebar-title">Home</div>
+        </div>
+
+        <div class="sidebar-link">
+            <img class="sidebar-image" src="/icons/explore.svg">
+            <div class="sidebar-title">Explore</div>
+        </div>
+
+        <div class="sidebar-link">
+            <img class="sidebar-image" src="/icons/subscriptions.svg">
+            <div class="sidebar-title">Subscriptions</div>
+        </div>
+
+        <div class="sidebar-link">
+            <img class="sidebar-image" src="/icons/originals.svg">
+            <div class="sidebar-title">Originals</div>
+        </div>
+
+        <div class="sidebar-link">
+            <img class="sidebar-image" src="/icons/youtube-music.svg">
+            <div class="sidebar-title">YouTube Music</div>
+        </div>
+
+        <div class="sidebar-link">
+            <img class="sidebar-image" src="/icons/library.svg">
+            <div class="sidebar-title">Library</div>
+        </div>
+
+    </nav>
+
+    <main>
+        <section class="video-grid">
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
+                    <!--
+                            -> src attribute is used to specify the source of the image to be loaded on to the webpage
+            
+                            -> setting one of width or height automatically scales the other unless explicitly specified
+                            -->
+
+                    <div class="video-time">
+                        14:20
+                    </div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
+                    </div>
+                    <!-- the spacing between these divs creates an unaccounted for empty space in the webpage, causing alignment problems when the divs are displayed as inline blocks -->
+
+                    <div class="video-info">
+                        <p class="video-title">
+                            Talking Tech and AI with Google CEO Sundar Pichai!
+                        </p>
+
+                        <p class="video-author">
+                            Marques Brownlee
+                        </p> <!-- p tags are by default display: block; -->
+
+                        <p class="video-stats">
+                            3.4M views <strong>&#183;</strong> 6 months ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
+
+                    <div class="video-time">
+                        08:22
+                    </div>
+                </div>
+
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="channel-pictures/channel-2.jpeg">
+                    </div>
+
+                    <div class="video-info">
+                        <p class="video-title">
+                            Try Not To Laugh Challenge #9
+                        </p>
+
+                        <p class="video-author">
+                            Markiplier
+                        </p>
+
+                        <p class="video-stats">
+                            19M views <strong>&#183;</strong> 4 years ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbnail-3.webp">
+
+                    <div class="video-time">
+                        09:13
+                    </div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="channel-pictures/channel-3.jpeg">
+                    </div>
+
+                    <div class="video-info">
+                        <p class="video-title">
+                            Crazy Tik Toks Taken Moments Before DISASTER
+                        </p>
+
+                        <p class="video-author">
+                            SSSniperWolf
+                        </p>
+
+                        <p class="video-stats">
+                            12M views <strong>&#183;</strong> 1 year ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbnail-4.webp">
+
+                    <div class="video-time">
+                        22:09
+                    </div>
+                </div>
+
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="channel-pictures/channel-4.jpeg">
+                    </div>
+
+                    <div class="video-info">
+                        <p class="video-title">
+                            The Simplest Math Problem No One Can Solve - Collatz Conjecture
+                        </p>
+
+                        <p class="video-author">
+                            Veritasium
+                        </p>
+
+                        <p class="video-stats">
+                            18M views <strong>&#183;</strong> 4 months ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbnail-5.webp">
+
+                    <div class="video-time">
+                        11:17
+                    </div>
+                </div>
+
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="channel-pictures/channel-5.jpeg">
+                    </div>
+
+                    <div class="video-info">
+                        <p class="video-title">
+                            Kadane's Algorithm to Maximum Sum Subarray Problem
+                        </p>
+
+                        <p class="video-author">
+                            CS Dojo
+                        </p>
+
+                        <p class="video-stats">
+                            519K views <strong>&#183;</strong> 5 years ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbnail-6.webp">
+
+                    <div class="video-time">
+                        19:59
+                    </div>
+                </div>
+
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="channel-pictures/channel-6.jpeg">
+                    </div>
+
+                    <div class="video-info">
+                        <p class="video-title">
+                            Anything You Can Fit In The Circle I&#39;ll Pay For
+                        </p>
+
+                        <p class="video-author">
+                            MrBeast
+                        </p>
+
+                        <p class="video-stats">
+                            141M views <strong>&#183;</strong> 1 year ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- a flexbox is similar to a css grid, it can create the same kind of layouts but its flexible -->
+
+    <!-- -------------------------------------------------------- end of YT ----------------------------------------------------------------- -->
+
+    <h1>assignment 7</h1>
+
+    <div class="assignment-7-div">
+        <img class="cat-profile" src="thumbnails\cat-pic.jpg">
+
+        <input class="trending-box" type="text" placeholder="What's happening?">
+
+        <button class="tweet-button">
+            Tweet
+        </button>
+    </div>
+</body>
+
+</html>

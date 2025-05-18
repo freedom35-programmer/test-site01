@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Flexbox learning</title>
+</head>
+
+<!-- the biggest advantage of flexbox over grid is that the width (size) of the elements is carried by the specific elements as they move along -->
+
+<body style="padding-bottom: 1000px">
+    <div style="
+        display: flex;
+        flex-direction: row;
+    "> <!-- flexbox is a flexible box, it behaves more like inline-block elements; grid has bit more rigid layout -->
+        <div style="background-color: lightblue">div1 expand</div>
+
+        <div style="background-color: lightpink">div2 <p>text</p>
+        </div>
+    </div>
+
+    <div style="
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row
+        ">
+        <!-- flexbox is a flexible box, it behaves more like inline-block elements; grid has bit more rigid layout -->
+        <div style="
+            background-color: lightblue;
+            width: 100px;
+        ">
+            div1 expand
+        </div>
+
+        <div style="
+            background-color: lightpink;
+            flex: 1;
+        "> <!-- flex: 1 is flex box equivalent to 1fr in grid -->
+            flex1
+        </div>
+    </div>
+
+    <!-- the order in which the elements are displayed in a flexbox does not alter their sizes -->
+    <div style="
+                margin-top: 30px;
+                display: flex;
+                flex-direction: row;
+            ">
+
+        <div style="
+                background-color: lightpink;
+                flex: 1;
+            ">
+            flex1
+        </div>
+
+        <div style="
+            background-color: lightblue;
+            width: 100px;
+            border-right: 2px solid gray;
+        ">
+            div1 expand
+        </div>
+
+        <div style="
+            background-color: lightblue;
+            flex: 1;
+        ">
+            flex1
+        </div>
+    </div>
+
+    <div style="
+        margin-top: 30px;
+        height: 70px;
+        border: 2px solid gray;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    "> <!-- start is the default value for justify-content -->
+
+        <div style="
+            background-color: lightblue;
+            width: 100px
+        ">
+            100px
+        </div>
+
+        <div style="
+            background-color: lightpink;
+            width: 100px
+        ">
+            100px
+        </div>
+
+        <div style="
+            background-color: lightblue;
+            width: 100px
+        ">
+            100px
+        </div>
+    </div>
+
+    <div style="
+        margin-top: 30px;
+        height: 70px;
+        border: 2px solid gray;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    "> <!-- space-between is used to display the contents of flexbox with even spacing and spread out to the ends -->
+
+        <div style="
+            background-color: lightblue;
+            width: 100px
+        ">
+            100px
+        </div>
+
+        <div style="
+            background-color: lightpink;
+            width: 100px
+        ">
+            100px
+        </div>
+
+        <div style="
+            background-color: lightblue;
+            width: 100px
+        ">
+            100px
+        </div>
+    </div>
+
+    <div style="
+        margin-top: 30px;
+        height: 70px;
+        border: 2px solid gray;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    ">
+        <!-- stretch is the default value of align-items which deals with the vertical alignment of flexbox elements -->
+
+        <div style="
+            background-color: lightblue;
+            width: 100px
+        ">
+            100px
+        </div>
+
+        <div style="
+            background-color: lightpink;
+            width: 100px
+        ">
+            100px
+        </div>
+
+        <div style="
+            background-color: lightblue;
+            width: 100px
+        ">
+            100px
+        </div>
+    </div>
+</body>
+
+</html>

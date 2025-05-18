@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body style="
+    height: 3000px;
+    padding-top: 60px;
+    padding-left: 92px;
+"> <!-- padding-top is used to render the elements without overlap with header -->
+    <div style="
+        background-color: rgb(40, 40, 40);
+        color: rgb(245, 245, 245);
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        height: 40px;
+        z-index: 1;
+    "> <!-- 
+    -> when we set position to fixed, the div behaves like an inline block element floating a level above the page, so the page starts from under the fixed element, also on the newer level, the fixed element behaves as an inline-block element
+    
+    -> the top right bottom and left attributes are used to specify the width between edges of the window and the element
+
+    -> a property of these is that the element stretches to meet the criteria
+    Ex: left: 10px; right: 30px;
+    here the element is stretched up to the point of having a 30px gap to the right edge of the window and 10px gap to the left
+
+    -> height: 40px; is used to avoid resizing with the page
+    -->
+        header
+    </div>
+
+    <div style="
+        background-color: rgb(55, 144, 31);
+        color: white;
+        position: fixed;
+        top: 40px;
+        bottom: 0px;
+        left: 0px;
+
+        width: 72px;
+    ">
+        sidebar
+        <div style="
+                background-color: rgb(223, 43, 43);
+                color: white;
+                position: absolute;
+                top: 5px;
+                right: 2px;
+                width: 15px;
+            ">
+            X
+        </div>
+        <!-- when we have a position: absolute; element inside a position: fixed; element, it is going to be placed relative to the fixed element -->
+    </div>
+
+    <div style="
+        background-color: rgb(223, 43, 43);
+        color: white;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
+    ">
+        absolute
+    </div> <!-- 
+    -> position: fixed; puts (positions) the elements 'on' the browser window (which does not move when we scroll) whereas position: absolute; puts them at a position 'on' the webpage where the element is moved when we scroll the page 
+    
+    -> used to position elements exactly where we want on the page
+
+    -> also this appears on top of our header due to the order it appears in the html (later element appears topper)
+
+    -> to alter the 'order' of which element appears on top of which, we use to z-index: <num>; style which makes the element with higher z-index appear on top of those that are lower
+    -->
+
+    <div style="
+            background-color: rgb(174, 174, 174);
+            position: static;
+        ">
+        <!-- when we set position to fixed, the div behaves like an inline block element floating a level above the page, so the page starts from under the fixed element, also on the newer level, the fixed element behaves as an inline-block element-->
+        header static
+    </div>
+
+    <div style="
+        background-color: lightblue;
+        height: 200px;
+        width: 200px;
+        position: relative;
+    "> <!-- static is default position property -->
+        div1
+        <div style="
+            background-color: rgba(0, 0, 0, 0.64);
+            color: white;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            padding: 1px 2px 1px 2px;
+            border-radius: 2px;
+        ">
+            08:22
+        </div>
+    </div>
+
+    <div style="
+        background-color: lightpink;
+        height: 200px;
+        width: 200px;
+        position: relative;
+    ">
+        div2
+        <div style="
+            background-color: rgba(0, 0, 0, 0.64);
+            color: white;
+            width: 42px;
+            height: 22px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            padding: 1px 3px 1px 3px;
+            border-radius: 4px;
+        ">
+            <strong>14:55</strong>
+        </div>
+    </div>
+    <!-- 
+    position: relative; styled element does not do anything but allows child elements to be positioned relative to it when they use position: absolute;
+    -->
+</body>
+
+</html>

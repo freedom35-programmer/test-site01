@@ -1,0 +1,42 @@
+.sidebar {
+  position: fixed;
+  top: 55px;
+  z-index: 1; /* to get in level with the header */
+  bottom: 0px;
+  left: 0px;
+  width: 75px;
+  background-color: white;
+}
+
+.sidebar-link {
+  height: 74px;
+
+  display: flex;
+  flex-direction: column; /* to make the names appear below the icons */
+  justify-content: center; /* horizontal alignment */
+  align-items: center; /* vertical alignment */
+
+  transition: background-color 240ms;
+}
+
+.sidebar-link:hover {
+  background-color: rgb(229, 229, 229);
+  cursor: pointer;
+}
+
+.sidebar-link img {
+  /* targets the 'img' tags inside the elements selected by the .sidebar-link selector */
+  height: 28px;
+  margin-bottom: 4px;
+}
+
+.sidebar-title {
+  color: rgb(47, 47, 47);
+  font-size: 12px;
+  width: 60px;
+  padding-top: 4px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px 4px 0px 6px;
+}

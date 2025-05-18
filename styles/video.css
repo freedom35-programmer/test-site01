@@ -1,0 +1,156 @@
+/* a comment in CSS */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 12px;
+  row-gap: 16px;
+} /* inheritence works on a property to property basis, and works on most text properties like color, font-weight, font-family, etc. and does not effect things like border, padding, margin, etc.*/
+
+.video-title {
+  margin-top: 0px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+/* when we need to apply the same style to multiple elements */
+.video-author,
+.video-stats {
+  font-size: 13px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+
+.thumbnail {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.thumbnail-row {
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.video-time {
+  background-color: rgba(0, 0, 0, 0.64);
+  color: white;
+  font-family: Roboto, Arial;
+  font-weight: 500;
+  font-size: 12px;
+  position: absolute;
+  right: 5px;
+  bottom: 12px;
+  border-radius: 2px;
+  padding: 4px;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+/* inline-block has some alignment problems, i.e., some small empty spaces around the inline block elements could cause these problems, another problem with inline-block divs is that they are not vertically aligned.
+
+Set a backgroud color to the channel-picture and video-info divs to observe this issue in detail.
+
+So, we use CSS grids for aligned horizontal layouts with minimal alignment issues */
+
+.profile-picture {
+  width: 80%;
+  border-radius: 50%;
+}
+
+/* end of YT */
+
+.assignment-7-div {
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.cat-profile {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.trending-box {
+  font-size: 30px;
+  color: rgb(96, 96, 96);
+  width: 420px;
+  height: 60px;
+  border: 1px solid white;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  transition: border-bottom 960ms;
+}
+
+.trending-box:focus {
+  outline: none;
+  border-bottom: 1px solid rgb(120, 120, 120);
+}
+
+.trending-box:focus::placeholder {
+  opacity: 0.4;
+}
+
+.trending-box::placeholder {
+  color: rgb(144, 144, 144);
+
+  transition: opacity 960ms;
+}
+/* to make the placeholder reappear smoothly */
+
+.tweet-button {
+  background-color: rgb(45, 145, 222);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: none;
+  border-radius: 27px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.assignment-7-div {
+  display: inline-block;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 1px 1px 5px 2px rgb(180, 180, 180);
+}
+
+/* the most recent styles are rendered by the browser (styles that are lower in the css file are preferred). So, media queries are advised to be placed at the bottom of the css file since they need to over-ride styles which are already applied.
+For more complicated pages, we can place each query below the elements whose properties are to be altered by the query. */
+
+@media (max-width: 1000px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+} /* this is a media query, media queries allow us to apply CSS styles depending on a device's media type or other features or characteristics such as screen resolution or orientation, aspect ratio, etc. */
+
+@media (max-width: 730px) {
+  .video-title {
+    font-size: 14px;
+  }
+
+  .video-author {
+    font-size: 9px;
+  }
+
+  .video-stats {
+    font-size: 9px;
+  }
+}
